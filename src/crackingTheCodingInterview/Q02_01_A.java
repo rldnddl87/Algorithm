@@ -1,4 +1,6 @@
 package crackingTheCodingInterview;
-
-public class Q01_04_QB {
+/**
+ * 
+ * */
+public class Q02_01_A {
 }

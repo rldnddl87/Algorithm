@@ -1,8 +1,6 @@
 package crackingTheCodingInterview;
 
-/**
- * 문자열이 주어 젔을 때, 문자열에 같은 문자가 중복되어 등장하는지 확인하는 알고리즘
- * */
+
 public class Q01_01_QuestionB {
     public static boolean isUnique(String str) {
 

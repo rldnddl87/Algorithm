@@ -3,7 +3,7 @@ package crackingTheCodingInterview;
 import java.util.Arrays;
 
 /**
- * 문 자열 2개가 주어 젔을때 서로 순열관계에 있는지 확인하는 메서드
+ * Q01_02 : 문 자열 2개가 주어 젔을때 서로 순열관계에 있는지 확인하는 메서드
  * */
 public class Q01_02_QuestionA {
     public static boolean isPermutation(String str, String anotherStr) {

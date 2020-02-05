@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * 문자열이 주어 젔을 때, 문자열에 같은 문자가 중복되어 등장하는지 확인하는 알고리즘
+ *  Q01_01 : 문자열이 주어 젔을 때, 문자열에 같은 문자가 중복되어 등장하는지 확인하는 알고리즘
  * */
 public class Q01_01_QuestionA {
     public static boolean isUnique(String input) {
