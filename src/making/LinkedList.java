@@ -45,28 +45,31 @@ public class LinkedList {
         System.out.println(n.data); //마지막으로 할당받은 노드는 next값이 없으므로 한번더 출력해줘야 한다.
     }
 
+    void removeDups() {
+        Node n = header;
+        while(n != null && n.next != null) {
+            Node r = n;
+            while(r.next != null) {
+                if(n.data == r.next.data) {
+                    r.next = r.next.next;
+                } else {
+                    r = r.next;
+                }
+            }
+            n = n.next;
+        }
+    }
+
     //test
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-        list.appendToTail(1);
-        list.appendToTail(2);
-        list.appendToTail(3);
-        list.appendToTail(4);
-        list.retrieve();
-
-        list.delete(2);
+        list.appendToTail(0);
+        list.appendToTail(0);
 
         list.retrieve();
 
-        LinkedList ll = new LinkedList();
-        ll.appendToTail(11);
-        ll.appendToTail(12);
-        ll.appendToTail(13);
-        ll.retrieve();
-        System.out.println("====");
+        list.removeDups();
+
         list.retrieve();
-
-
-
     }
 }

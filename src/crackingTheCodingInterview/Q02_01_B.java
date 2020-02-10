@@ -1,26 +1,23 @@
 package crackingTheCodingInterview;
 
-import java.util.*;
 import crackingTheCodingInterview.CtCILibrary.LinkedListNode;
 
-/**
- * 정렬되지 않은 연결 리스트가 주어졌을 때 이 리스트에서 중복되는 원소를 제거하는 알고리즘
- * */
-public class Q02_01_A {
-    public static void deleteDups(LinkedListNode n) {
-        HashSet<Integer> set = new HashSet<Integer>();
-        LinkedListNode previous = null;
-        while (n != null) {
-            if (set.contains(n.data)) {
-                previous.next = n.next;
-            } else {
-                set.add(n.data);
-                previous = n;
+public class Q02_01_B {
+    public static void deleteDups(LinkedListNode list) {
+        LinkedListNode n = list;
+
+        while( n != null) {
+            LinkedListNode r = n;
+            while (r.next != null) {
+                if(n.data == r.next.data) {
+                    r.next = r.next.next;
+                } else {
+                    r = r.next;
+                }
             }
             n = n.next;
         }
     }
-
 
     public static void main(String[] args) {
         LinkedListNode first = new LinkedListNode(0, null, null); //AssortedMethods.randomLinkedList(1000, 0, 2);
