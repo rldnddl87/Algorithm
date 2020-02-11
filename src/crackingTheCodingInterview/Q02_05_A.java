@@ -22,28 +22,19 @@ public class Q02_05_A {
             return null;
         }
 
-        if( num1 == null && num2 == null && x != 0){
-            node.data = x;
-            return node;
-        }
-
-        if( num1 == null) {
-            x += num2.data;
-        }
-
-        if( num2 == null) {
+        if( num1 != null) {
             x += num1.data;
         }
 
-        if( num1 != null && num2 != null) {
-            x += num1.data + num2.data;
+        if( num2 != null) {
+            x += num2.data;
         }
 
-        node.data = x >= 10 ? x - 10 : x;
 
-        if( num1 != null && num2 != null) {
-           node.next = plusNode(num1.next == null? null : num1.next, num2.next == null ? null : num2.next, x >= 10 ? 1 : 0);
+        node.data = x % 10; // 1의자리
 
+        if( num1 != null || num2 != null) {
+            node.next  = plusNode(num1 == null ? null : num1.next, num2 == null ? null : num2.next, x >= 10 ? 1 : 0);
         }
 
         return node;
