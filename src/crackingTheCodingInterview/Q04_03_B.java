@@ -2,15 +2,14 @@ package crackingTheCodingInterview;
 
 import crackingTheCodingInterview.CtCILibrary.AssortedMethods;
 import crackingTheCodingInterview.CtCILibrary.TreeNode;
-import sun.awt.image.ImageWatched;
-import sun.reflect.generics.tree.Tree;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 
 
 public class Q04_03_B {
+
+    //BFS로 탐색해보면
     public static ArrayList<LinkedList<TreeNode>> process(TreeNode root) {
         ArrayList<LinkedList<TreeNode>> result = new ArrayList<>();
 
