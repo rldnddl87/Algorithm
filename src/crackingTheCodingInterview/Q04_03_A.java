@@ -2,6 +2,8 @@ package crackingTheCodingInterview;
 
 import crackingTheCodingInterview.CtCILibrary.AssortedMethods;
 import crackingTheCodingInterview.CtCILibrary.TreeNode;
+import sun.reflect.generics.tree.Tree;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -18,30 +20,32 @@ public class Q04_03_A {
 
 
     //깊이 우선 탐색으로 해보면 (depth 표시를 위한 매개변수가 필요할거고..)
-    public static void process(TreeNode root, ArrayList<LinkedList<TreeNode>> list, int level) {
+    public static void process(TreeNode root, ArrayList<LinkedList<TreeNode>> lists, int level) {
         if(root == null) {
             return;
         }
+        LinkedList<TreeNode> list = null;
 
-        if( list.get(level).isEmpty()) {
-            LinkedList<TreeNode> nodeLinkedList = new LinkedList<>();
-            list.add(nodeLinkedList);
+        if(lists.size() == level) { //초기 level 값이 0 이기 때문에 결국 lists가 비어 있다면
+            LinkedList<TreeNode> linkedList = new LinkedList<>(); //새로운 링크드 리스트를 만들어주고
+            lists.add(linkedList);
+            list = linkedList;
+        } else {
+            //비어있지 않다면
+            list = lists.get(level);
         }
 
-        LinkedList<TreeNode> nodeLinkedList = list.get(level);
-        nodeLinkedList.add(root);
+        list.add(root);
 
-        process(root.left, list, level + 1);
-        process(root.right, list, level + 1);
-        
+        process(root.left, lists, level + 1);
+        process(root.right, lists, level + 1);
+
     }
 
     public static ArrayList<LinkedList<TreeNode>> process(TreeNode root){
-        ArrayList<LinkedList<TreeNode>> list = new ArrayList<>();
-        LinkedList<TreeNode> linkedList = new LinkedList<>();
-        list.add(linkedList);
-        process(root, list, 0);
-        return list;
+        ArrayList<LinkedList<TreeNode>> lists = new ArrayList<>();
+        process(root, lists, 0);
+        return lists;
     }
 
     public static void print(ArrayList<LinkedList<TreeNode>> list) {
