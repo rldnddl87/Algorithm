@@ -16,6 +16,7 @@ public class Q04_05_A {
 
     public static boolean isBST(TreeNode root) {
         //모든 노드에 대해서 전위순회를 하면서 left -> root -> right 하나라도 조건에 부합하지 않으면 false
+        //전위순회이기 때문에 last에 항상 왼쪽 밸류가 저장되기 때문에 왼쪽 노드를 검증하고 오른쪽 노드를 검증하는 순서를 반드시 지켜야 한다.
         if(root == null) return true;
 
         if( !isBST(root.left)) return false;
