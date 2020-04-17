@@ -1,4 +1,4 @@
-package leetcode.bitManipulation;
+package leetcode;
 /*
 260. Single Number III
 Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice.

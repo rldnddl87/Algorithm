@@ -1,7 +1,7 @@
 package making;
 
 /**
- * 단방향 연결 리스트( LinkedList)
+ * 단방향 연결 리스트( Util)
  * */
 public class Node {
     Node next = null;

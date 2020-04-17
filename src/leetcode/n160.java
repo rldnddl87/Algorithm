@@ -1,4 +1,4 @@
-package leetcode.bitManipulation;
+package leetcode;
 
 /*
 * 160. Intersection of Two Linked Lists
@@ -12,6 +12,8 @@ Input Explanation: The intersected node's value is 8 (note that this must not be
 From the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,0,1,8,4,5]. There are 2 nodes before the intersected node in A;
 There are 3 nodes before the intersected node in B.
 * */
+
+import leetcode.Util.ListNode;
 
 import java.util.*;
 

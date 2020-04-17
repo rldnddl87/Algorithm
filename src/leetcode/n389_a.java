@@ -1,4 +1,4 @@
-package leetcode.bitManipulation;
+package leetcode;
 
 //XOR연산은 연산의 순서에 상관없다.
 

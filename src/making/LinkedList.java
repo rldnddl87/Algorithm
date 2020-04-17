@@ -3,7 +3,7 @@ package making;
 public class LinkedList {
     Node header;
 
-    static class Node { //LinkedList 객체가 생성될때마다 헤더역할을 하는 노드
+    static class Node { //Util 객체가 생성될때마다 헤더역할을 하는 노드
         int data;
         Node next = null;
     }

@@ -1,4 +1,4 @@
-package leetcode.bitManipulation;
+package leetcode;
 /*
 1318. Minimum Flips to Make a OR b Equal to c
 Given 3 positives numbers a, b and c. Return the minimum flips required in some bits of a and b to make ( a OR b == c ). (bitwise OR operation).

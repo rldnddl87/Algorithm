@@ -1,4 +1,4 @@
-package leetcode.bitManipulation;
+package leetcode;
 
 //Using Divide and Qonquer
 public class n169_a {

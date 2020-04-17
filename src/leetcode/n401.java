@@ -1,4 +1,4 @@
-package leetcode.bitManipulation;
+package leetcode;
 
 import java.util.*;
 

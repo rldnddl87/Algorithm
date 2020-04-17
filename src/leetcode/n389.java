@@ -1,4 +1,4 @@
-package leetcode.bitManipulation;
+package leetcode;
 /*
 389. Find the Difference
 Given two strings s and t which consist of only lowercase letters.

@@ -1,4 +1,4 @@
-package leetcode.bitManipulation;
+package leetcode;
 /*
 * 141. Linked List Cycle
 * Given a linked list, determine if it has a cycle in it.
@@ -12,6 +12,8 @@ Input: head = [3,2,0,-4], pos = 1
 Output: true
 Explanation: There is a cycle in the linked list, where tail connects to the second node.
 * */
+
+import leetcode.Util.ListNode;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package leetcode.bitManipulation;
+package leetcode;
 /*
 234. Palindrome Linked List
 Given a singly linked list, determine if it is a palindrome.
@@ -11,6 +11,8 @@ Output: false
 * Input: 1->2->2->1
 Output: true
 * */
+
+import leetcode.Util.ListNode;
 
 /*
 * 예를들어
