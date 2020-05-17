@@ -28,17 +28,16 @@ public class n389 {
     public char findTheDifference(String s, String t) {
         Map<Character, Integer> map = new HashMap<>();
 
-        for(int i = 0; i < s.length(); i++) {
-            map.put(s.charAt(i), map.getOrDefault(s.charAt(i) , 0) + 1);
+        for (int i = 0; i < s.length(); i++) {
+            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
         }
 
-        for(int k = 0; k < t.length(); k++) {
-            map.put(t.charAt(k), map.getOrDefault(t.charAt(k) , 0) - 1);
+        for (int k = 0; k < t.length(); k++) {
+            map.put(t.charAt(k), map.getOrDefault(t.charAt(k), 0) - 1);
         }
 
         return minimumCount(map);
     }
-
 
     public char minimumCount(Map<Character, Integer> map) {
 
@@ -46,8 +45,8 @@ public class n389 {
 
         Map.Entry<Character, Integer> entry = null;
 
-        for( Map.Entry<Character, Integer> e : map.entrySet()) {
-            if(entry == null || e.getValue() == -1) {
+        for (Map.Entry<Character, Integer> e : map.entrySet()) {
+            if (entry == null || e.getValue() == -1) {
                 entry = e;
             }
 
